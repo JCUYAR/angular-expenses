@@ -18,10 +18,10 @@ export const routes: Routes = [
         path: 'graphics',
         component: Graphics
     },
-    {
-        path: 'login',
-        component: Login
-    },
+{
+  path: 'login',
+  loadComponent: () => import('./components/login/login').then(m => m.Login)
+},
     {
         path: 'create-account',
         component: CreateAccount
